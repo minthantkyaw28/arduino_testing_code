@@ -40,15 +40,11 @@ void loop() {
 // Custom Funcs
 void blinker(int pinNUM,int ONdelayTime,int OFFdelayTime){
   digitalWrite(pinNUM,HIGH);
-  Serial.print("LED number ");
-  Serial.print(pinNUM);
-  Serial.print(" IS ON \n");
+  Serial.println("LED number "+String(pinNUM)+" IS ON.");
   delay(ONdelayTime);
 
   digitalWrite(pinNUM,LOW);
-  Serial.print("LED number ");
-  Serial.print(pinNUM);
-  Serial.print(" IS OFF \n");
+  Serial.println("LED number "+String(pinNUM)+" IS OFF.");
   delay(OFFdelayTime);
 
 }
