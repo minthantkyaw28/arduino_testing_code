@@ -11,10 +11,10 @@ void setup() {
 
 void loop() {
   int LDR_value = analogRead(LDR); // Read LDR value
-  Serial.println(LDR_value); // Print LDR value to serial monitor
+  Serial.println("LDR value is = "+String(LDR_value)); // Print LDR value to serial monitor
   delay(50); // Wait for a moment
 
-  if (LDR_value > 800) { // If LDR value is greater than 800
+  if (LDR_value < 600) { // If LDR value is greater than 800
     digitalWrite(buzzer, HIGH); // Turn on the buzzer
     digitalWrite(led, HIGH); // Turn on the LED
     delay(100); // Wait for 1 second
