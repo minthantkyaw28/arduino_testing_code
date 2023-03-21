@@ -43,7 +43,7 @@ void loop() {
   
  int LDR_PIN_VALUE=analogRead(LDR); //Read analog data from A0
  Serial.println("LDR value is = "+String(LDR_PIN_VALUE)); // Print LDR value to serial monitor
- delay(50); // Wait for a moment
+//  delay(500); // Wait for a moment
 
  ldr_relay_led(LDR_PIN_VALUE,LED,buzzer,relayPin);
 
@@ -54,12 +54,12 @@ void ldr_relay_led(int LDR_PIN_VALUE, int LED, int BUZZER, int RELAY_PIN){
   if (LDR_PIN_VALUE < 600) { 
     
    
-    digitalWrite(BUZZER, LOW); // Turn off the buzzer
+    digitalWrite(BUZZER, HIGH); // Turn off the buzzer
     digitalWrite(LED, LOW);
     digitalWrite(RELAY_PIN, LOW);
   }else{
 
-  digitalWrite(BUZZER, HIGH); // Turn on the buzzer
+  digitalWrite(BUZZER, LOW); // Turn on the buzzer
   digitalWrite(LED, HIGH);  // Turn on the LED
   digitalWrite(RELAY_PIN, HIGH); // Turn on the AC LED
 
