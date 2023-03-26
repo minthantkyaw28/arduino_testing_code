@@ -24,16 +24,23 @@
 
 //Blink built in 13 
 // 13 == LED_BUILTIN
+
+const int led7=7;
+
 void setup()
 {
   pinMode(LED_BUILTIN, OUTPUT);
+pinMode(led7, OUTPUT);
 
 }
 
 void loop()
 {
   digitalWrite(LED_BUILTIN, HIGH);
+  digitalWrite(led7,LOW);
   delay(1000); // Wait for 1000 millisecond(s)
-  digitalWrite(LED_BUILTIN, LOW);
+  
+  digitalWrite(led7,HIGH);
+  digitalWrite(LED_BUILTIN,LOW);
   delay(1000);  // Wait for 1000 millisecond(s)
 }
